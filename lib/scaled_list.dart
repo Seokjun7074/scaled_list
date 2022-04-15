@@ -150,24 +150,24 @@ class _ScaledListState extends State<ScaledList> {
                                 color: widget.itemColor(index),
                               ),
                             ),
-                            Positioned(
-                                right: 0,
-                                bottom: 0,
-                                top: 0,
-                                child: CustomPaint(
-                                  size: Size(
-                                    parentWidth * widget.cardWidthRatio,
-                                    _selectedIndex == index
-                                        ? widget.selectedCardHeightRatio *
-                                            parentHeight
-                                        : widget.unSelectedCardHeightRatio *
-                                            parentHeight,
-                                  ),
-                                  painter: CustomCardPainter(
-                                      radius: 20,
-                                      startColor: widget.itemColor(index),
-                                      endColor: widget.itemColor(index)),
-                                )),
+                            // Positioned(
+                            //     right: 0,
+                            //     bottom: 0,
+                            //     top: 0,
+                            //     child: CustomPaint(
+                            //       size: Size(
+                            //         parentWidth * widget.cardWidthRatio,
+                            //         _selectedIndex == index
+                            //             ? widget.selectedCardHeightRatio *
+                            //                 parentHeight
+                            //             : widget.unSelectedCardHeightRatio *
+                            //                 parentHeight,
+                            //       ),
+                            //       painter: CustomCardPainter(
+                            //           radius: 20,
+                            //           startColor: widget.itemColor(index),
+                            //           endColor: widget.itemColor(index)),
+                            //     )),
                             Positioned.fill(
                                 child:
                                     widget.itemBuilder(index, _selectedIndex))
